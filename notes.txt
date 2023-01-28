@@ -1,0 +1,63 @@
+        MYSQL
+
+first download mysql
+then sql workbench makes it easier to managed things
+then drop schema
+create new schema
+create name new table
+'pk' for primary key to track data and 'ai' for auto incriment so it continues on its own 1 2 3 and so on
+then title with 'nn' option for not null must have title and id 'VARCHAR' make it a string and can control character limits
+next one is cover picture but can be null dont NEED image
+it also shows code version for how u can do it in terminal workbench just makes it easier
+* note if you see something not working download earlier version of it -_-
+SELECT * FROM test.books; this is how we select all from this table gonna write it in app
+
+        BACKEND 
+      
+then npm init -y
+npm i express mysql nodemon 'installs express mysql and nodemon duh'
+index.js create
+* import express *cant use outside module so go to json and add module type   "type": "module",
+
+then make a port to listen
+then node index.js
+* in scripts json add nodemomn so the server can auto update whenever anything is changed rather than having to restart it everytime     "start": "nodemon index.js"
+
+* ISSUE WITH MYSQL 8 AND NODEJS SHIT FIX
+!!!!!!!!!!!!!!!!!!
+Execute the following query in MYSQL Workbench
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+Where root as your user localhost as your URL and password as your password
+Then run this query to refresh privileges:
+flush privileges;
+!!!!!!!!!!!!!!!!!
+can use post man to test api request
+
+
+        FRONTEND
+npm i react-router-dom
+import {
+    createBrowserRouter,
+    RouterProvider,
+    Route,
+    Link,
+  } from "react-router-dom"; in app.js dont forget
+wrap in broswer router and routes
+then add pages folder and pages
+import them into app.js
+books is home page to fetch data from backend
+* npm i axios allows use to make api req using react app
+so gonna use a usestate for this
+then a useeffect
+* npm i cors in THE BACKEND FOLDER if its not fetching
+* Change https protocol with http in your url. Because https protocol need ssl certificate. if getting axios error in console
+worked on books page 
+worked on add page notes in them
+then added some css styles
+then added the update and delete buttons
+now working on delete portion
+
+
+
+
